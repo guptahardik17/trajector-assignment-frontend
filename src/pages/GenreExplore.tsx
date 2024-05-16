@@ -4,7 +4,7 @@ import {
   // useParams
 } from "react-router-dom";
 import { COMMON_TITLES } from "src/constant";
-import GridPage from "src/components/GridPage";
+import GridPage from "src/components/Grid/GridPage";
 import { MEDIA_TYPE } from "src/types/Common";
 import { CustomGenre, Genre } from "src/types/Genre";
 import {

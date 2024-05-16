@@ -24,11 +24,7 @@ const router = createBrowserRouter([
             lazy: () => import("src/pages/GenreExplore"),
           },
         ],
-      },
-      {
-        path: MAIN_PATH.watch,
-        lazy: () => import("src/pages/WatchPage"),
-      },
+      }
     ],
   },
 ]);

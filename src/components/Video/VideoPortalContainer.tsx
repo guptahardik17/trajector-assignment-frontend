@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 import Portal from "@mui/material/Portal";
 
 import VideoCardPortal from "./VideoCardPortal";
-import MotionContainer from "./animate/MotionContainer";
+import MotionContainer from "../animate/MotionContainer";
 import {
   varZoomIn,
   varZoomInLeft,
   varZoomInRight,
-} from "./animate/variants/zoom/ZoomIn";
+} from "../animate/variants/zoom/ZoomIn";
 import { usePortalData } from "src/providers/PortalProvider";
 
 export default function VideoPortalContainer() {

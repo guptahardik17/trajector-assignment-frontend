@@ -3,24 +3,19 @@ import Stack from "@mui/material/Stack";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import VolumeUpIcon from "@mui/icons-material/VolumeUp";
-import PlayCircleIcon from "@mui/icons-material/PlayCircle";
-import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
-import AddIcon from "@mui/icons-material/Add";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Movie } from "src/types/Movie";
 import { usePortal } from "src/providers/PortalProvider";
 import { useDetailModal } from "src/providers/DetailModalProvider";
 import { formatMinuteToReadable, getRandomNumber } from "src/utils/common";
-import NetflixIconButton from "./NetflixIconButton";
-import MaxLineTypography from "./MaxLineTypography";
-import AgeLimitChip from "./AgeLimitChip";
-import QualityChip from "./QualityChip";
-import GenreBreadcrumbs from "./GenreBreadcrumbs";
+import MovieIconButton from "../MovieIconButton";
+import MaxLineTypography from "../MaxLineTypography";
+import AgeLimitChip from "../AgeLimitChip/AgeLimitChip";
+import QualityChip from "../QualityChip";
+import GenreBreadcrumbs from "../Grid/GenreBreadcrumbs";
 import { useGetConfigurationQuery } from "src/store/slices/configuration";
 import { MEDIA_TYPE } from "src/types/Common";
 import { useGetGenresQuery } from "src/store/slices/genre";
-import { MAIN_PATH } from "src/constant";
 
 interface VideoCardModalProps {
   video: Movie;
@@ -88,35 +83,17 @@ export default function VideoCardModal({
             {video.title}
           </MaxLineTypography>
           <div style={{ flexGrow: 1 }} />
-          <NetflixIconButton>
-            <VolumeUpIcon />
-          </NetflixIconButton>
-        </div>
-      </div>
-      <CardContent>
-        <Stack spacing={1}>
-          <Stack direction="row" spacing={1}>
-            <NetflixIconButton
-              sx={{ p: 0 }}
-              onClick={() => navigate(`/${MAIN_PATH.watch}`)}
-            >
-              <PlayCircleIcon sx={{ width: 40, height: 40 }} />
-            </NetflixIconButton>
-            <NetflixIconButton>
-              <AddIcon />
-            </NetflixIconButton>
-            <NetflixIconButton>
-              <ThumbUpOffAltIcon />
-            </NetflixIconButton>
-            <div style={{ flexGrow: 1 }} />
-            <NetflixIconButton
+          <MovieIconButton
               onClick={() => {
                 setDetailType({ mediaType: MEDIA_TYPE.Movie, id: video.id });
               }}
             >
               <ExpandMoreIcon />
-            </NetflixIconButton>
-          </Stack>
+          </MovieIconButton>
+        </div>
+      </div>
+      <CardContent>
+        <Stack spacing={1}>
           <Stack direction="row" spacing={1} alignItems="center">
             <Typography
               variant="subtitle1"

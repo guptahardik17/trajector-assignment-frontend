@@ -16,17 +16,17 @@ import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import VolumeOffIcon from "@mui/icons-material/VolumeOff";
 import Player from "video.js/dist/types/player";
 
-import MaxLineTypography from "./MaxLineTypography";
-import PlayButton from "./PlayButton";
-import NetflixIconButton from "./NetflixIconButton";
-import AgeLimitChip from "./AgeLimitChip";
-import QualityChip from "./QualityChip";
+import MaxLineTypography from "../MaxLineTypography";
+import PlayButton from "../PlayButton";
+import MovieIconButton from "../MovieIconButton";
+import AgeLimitChip from "../AgeLimitChip/AgeLimitChip";
+import QualityChip from "../QualityChip";
 import { formatMinuteToReadable, getRandomNumber } from "src/utils/common";
-import SimilarVideoCard from "./SimilarVideoCard";
+import SimilarVideoCard from "../SimilarVideoCard";
 import { useDetailModal } from "src/providers/DetailModalProvider";
 import { useGetSimilarVideosQuery } from "src/store/slices/discover";
 import { MEDIA_TYPE } from "src/types/Common";
-import VideoJSPlayer from "./watch/VideoJSPlayer";
+import VideoJSPlayer from "../watch/VideoJSPlayer";
 
 const Transition = forwardRef(function Transition(
   props: TransitionProps & {
@@ -167,21 +167,14 @@ export default function DetailModal() {
                   {detail.mediaDetail?.title}
                 </MaxLineTypography>
                 <Stack direction="row" spacing={2} sx={{ mb: 3 }}>
-                  <PlayButton sx={{ color: "black", py: 0 }} />
-                  <NetflixIconButton>
-                    <AddIcon />
-                  </NetflixIconButton>
-                  <NetflixIconButton>
-                    <ThumbUpOffAltIcon />
-                  </NetflixIconButton>
                   <Box flexGrow={1} />
-                  <NetflixIconButton
+                  <MovieIconButton
                     size="large"
                     onClick={() => handleMute(muted)}
                     sx={{ zIndex: 2 }}
                   >
                     {!muted ? <VolumeUpIcon /> : <VolumeOffIcon />}
-                  </NetflixIconButton>
+                  </MovieIconButton>
                 </Stack>
 
                 <Container
