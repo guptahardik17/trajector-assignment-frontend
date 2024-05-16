@@ -34,6 +34,6 @@ $ npm test
 ![Movie View][2]
 ![Movie Details Page][3]
 
-[1]: https://imgur.com/CcNMDb4
-[2]: https://imgur.com/wtPDjZP
-[3]: https://imgur.com/pbcAfhA
+[1]: https://imgur.com/CcNMDb4.png
+[2]: https://imgur.com/wtPDjZP.png
+[3]: https://imgur.com/pbcAfhA.png
