@@ -25,13 +25,24 @@ $ npm test
   - Details of the movie
   - A short previews rendered as a youtube video
   - Showing similar movies which is provided by TMDB API Only
+
+- Bonus Points I Covered -
+  - Ingestion of sample API/s using TMDB OpenApis.
+  - Smart traversal of API returns.
+  - Modular code summing up to a whole.
+  - Some minimal Unit test cases. Can be extended easily.
+  - Proper code formats and documentation.
 ```
 
 
 ## Screenshots
 
 ![List Page][1]
+
+
 ![Movie View][2]
+
+
 ![Movie Details Page][3]
 
 [1]: https://imgur.com/CcNMDb4.png
